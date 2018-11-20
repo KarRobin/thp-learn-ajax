@@ -18,6 +18,21 @@
 //= require popper
 //= require bootstrap-sprockets
 
+//--- TAB ---//
+$(document).ready(function(){
+    $(".tab_content").hide(); //Hide all content
+    $(".tab1").addClass("active").show(); //Activate first tab
+    $(".tab_content:first").show(); //Show first tab content
+    //On Click Event
+    $(".tabs div").click(function() {
+        $(".tabs div").removeClass("active"); //Remove any "active" class
+        $(".tab_content").hide();
+        $(this).addClass("active"); //Add "active" class to selected tab
+        $(".active .tab_content").show(); //Show tab content of active tab
+    });
+});
+
+
 //--- DROPDOWN ---//
 $(document).ready(function() {
 

@@ -1,0 +1,12 @@
+.tout{
+ background-color: grey;
+ font-weight: bold;
+ border: 1px solid grey;
+}
+
+.tabs{
+ display: flex;
+ justify-content: space-around;
+ list-style-type: none;
+ cursor: pointer;
+}
