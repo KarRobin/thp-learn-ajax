@@ -1,7 +1,7 @@
 .tout{
- background-color: grey;
+ background-color: white;
  font-weight: bold;
- border: 1px solid grey;
+ border: 1px solid black;
 }
 
 .tabs{
@@ -9,4 +9,8 @@
  justify-content: space-around;
  list-style-type: none;
  cursor: pointer;
+}
+
+.tab1 .tab2 .tab3{
+	border: 1px solid black;
 }
