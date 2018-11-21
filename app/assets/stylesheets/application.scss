@@ -4,3 +4,41 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "components/*";
+
+#carrousel{
+    position:relative;
+    height:480px;
+    width:640px;
+    margin:auto;
+  }
+  
+  #carrousel ul li{
+    position: absolute;
+    top:0;
+    left:0;
+    list-style:none;
+  }
+  
+  .arrow{
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    top:50%;
+    z-index:50;
+    border-top:3px solid rgb(0, 0, 0);
+    border-right:3px solid rgb(0, 0, 0);
+    cursor:pointer;
+    transition:border-color 0.3s ease-out;
+  }
+  
+
+  
+  .arrow-left{
+    left:20px;
+    transform:rotate(225deg);
+  }
+  
+  .arrow-right{
+    right:20px;
+    transform:rotate(45deg);
+  }  

@@ -36,3 +36,16 @@
     <% end %>
   </div>
 </div>
+
+
+<div id="carrousel">
+  <div class="arrow arrow-left"></div>
+  <ul>
+    <% @tasks.each do |task|  %> <!-- Ici on créer une liste avec toutes les images du carousel. -->
+      <% unless task.image.nil? %>
+        <li><%= image_tag task.image %></li>
+      <% end %>
+    <% end %>
+  </ul>
+  <div class="arrow arrow-right"></div>
+</div>
