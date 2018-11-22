@@ -17,6 +17,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require jquery-ui/widgets/tabs
 
 //--- TAB ---//
 $(document).ready(function(){
@@ -158,3 +159,21 @@ $(document).ready(function(){
   
   });
   
+
+
+  $( function() {
+    $( "#tabs" ).tabs({ collapsible: true });
+
+
+    $("#tabs").click(function() {
+        $(".tabs div").removeClass("active"); //Remove any "active" class
+        $("#content").hide();
+        $(this).addClass("active"); //Add "active" class to selected tab
+        $(".active #content").show(); //Show tab content of active tab
+    });
+
+    $('.delete_email').bind('ajax:success', function() {
+        $(this).closest('div').fadeOut();
+     });
+
+  } );

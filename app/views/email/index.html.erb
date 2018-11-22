@@ -1,0 +1,23 @@
+<body>
+<div id="tabs">
+    
+    <ul>
+        <% @emails.each do |email| %>
+            <li><a href="#tabs-<%= email.id %>"><%= email.object %></a></li>
+        <% end %>
+    </ul>
+    
+    <div id="content">
+        <% @emails.each do |email| %>
+            <div id="tabs-<%= email.id %>">
+                <p><%= email.body %> </p>
+                <%= link_to 'Destroy', email, method: :delete, 
+                                            data: { confirm: 'Are you sure?' }, 
+                                            :remote => true, 
+                                            :class => 'delete_email' %>
+            </div>
+        <% end %>
+    </div>
+
+</div>
+</body>
